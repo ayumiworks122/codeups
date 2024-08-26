@@ -1,0 +1,45 @@
+@use "global" as *;
+
+.mv {
+  position: relative;
+  height: 100dvh;
+}
+
+.mv__title {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  z-index: 50;
+  text-align: center;
+  color: $white;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  overflow: hidden;
+  line-height: 1;
+}
+
+.mv__title-main {
+  font-family: $Lato-font-family;
+  font-weight: normal;
+  letter-spacing: 0.54em;
+  margin-right: -0.54em;
+  font-size: rem(40);
+  text-transform: uppercase;
+  display: block;
+  @include mq("md") {
+    font-size: rem(80);
+    line-height: calc(100 / 80);
+  }
+}
+
+.mv__title-sub {
+  font-family: $en-font-family;
+  font-size: rem(20);
+  letter-spacing: initial;
+  font-weight: normal;
+}
+
+.mv .swiper-slide img {
+  height: 100dvh;
+  object-fit: cover;
+}

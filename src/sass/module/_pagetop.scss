@@ -1,0 +1,19 @@
+@use "global" as *;
+
+.pagetop {
+  width: rem(48);
+  position: absolute;
+  right: rem(15);
+  display: block;
+  z-index: 10;
+  transform: translateY(-90%);
+  @include mq("md") {
+    width: rem(80);
+    right: rem(20);
+    margin-top: rem(-10);
+  }
+}
+
+.pagetop img {
+  height: 100%;
+}

@@ -1,0 +1,61 @@
+@use "global" as *;
+
+.header {
+  background-color: rgba(#0d2936, 0.68);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  @include mq("md") {
+    height: rem(90);
+  }
+}
+
+.header__menu::before {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: rem(104);
+  background-color: $accent-color-green;
+  content: "";
+  z-index: 100;
+  @include mq("md") {
+    content: none;
+  }
+}
+
+.header__menu-wrap {
+  overflow-y: scroll;
+  height: 100%;
+  padding-bottom: rem(60);
+  padding-top: rem(104);
+  position: relative;
+  @include mq("md") {
+    padding: 0;
+    overflow: hidden;
+  }
+}
+
+.header__inner.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: rem(21);
+  padding-bottom: rem(21);
+  @include mq("md") {
+    max-width: 100%;
+    padding: 0 rem(20) 0 rem(40);
+    height: 100%;
+  }
+}
+
+.header__logo,
+.header__drawer {
+  position: relative;
+  z-index: 110;
+}
+
+.header__logoLink {
+  width: rem(133);
+}

@@ -1,0 +1,138 @@
+@use "global" as *;
+
+.contact__content {
+  display: flex;
+  flex-direction: column;
+  gap: rem(40);
+  position: relative;
+  @include mq("md") {
+    flex-direction: row;
+    box-shadow: rem(4) rem(4) rem(10) rgba(#000000, 0.25);
+    padding: rem(80) rem(31) rem(80) rem(50);
+    justify-content: space-between;
+    gap: 7.6%;
+  }
+}
+
+.contact__content::before {
+  content: "";
+  background-image: url(../images/top/contact-bg-01.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+  aspect-ratio: 109 / 50;
+  width: rem(109);
+  position: absolute;
+  right: 0;
+  top: rem(-26);
+  @include mq("md") {
+    aspect-ratio: 301 / 138;
+    width: rem(301);
+    right: calc(50% - min(48.5vw, rem(669)));
+    top: rem(-40);
+  }
+}
+
+.contact__section-header .section-header__en {
+  font-size: rem(80);
+  line-height: 1;
+  text-shadow: 0 rem(4) rem(4) rgba(#000000, 0.25);
+}
+
+.contact__section-header .section-header__jp {
+  text-shadow: 0 rem(4) rem(4) rgba(#000000, 0.25);
+  margin-top: rem(-6);
+  margin-bottom: 0;
+}
+
+.contact__info {
+  text-align: center;
+  padding: 0 rem(25);
+  @include mq("md") {
+    padding: 0;
+    width: 56.86%;
+  }
+}
+
+.contact__access {
+  display: flex;
+  flex-direction: column;
+  gap: rem(16);
+  margin-top: rem(16);
+  @include mq("md") {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: rem(24);
+    gap: rem(21);
+  }
+}
+
+.contact__access-text {
+  text-shadow: 0 rem(4) rem(4) rgba(#000000, 0.25);
+  line-height: calc(24 / 16);
+  font-size: rem(16);
+  display: flex;
+  gap: rem(4);
+  flex-direction: column;
+  @include mq("md") {
+    text-align: left;
+    text-shadow: none;
+  }
+}
+
+.contact__access-text span {
+  display: block;
+}
+
+.contact__logo {
+  @include mq("md") {
+    padding-bottom: rem(8);
+  }
+}
+
+.contact__logo img {
+  width: rem(174);
+  margin: 0 auto;
+  @include mq("md") {
+    width: rem(200);
+    height: rem(75);
+  }
+}
+
+.contact__access-image {
+  @include mq("md") {
+    width: 62%;
+  }
+}
+
+.contact__access-image img {
+  aspect-ratio: 295 / 160;
+  box-shadow: 0 rem(4) rem(4) rgba(#000000, 0.25);
+  @include mq("md") {
+    aspect-ratio: 273 / 148;
+    width: rem(273);
+    height: 100%;
+  }
+}
+
+.contact__main {
+  text-align: center;
+  @include mq("md") {
+    border-left: rem(1) solid $accent-color-green;
+    padding: rem(20) rem(81);
+  }
+}
+
+.contact__text {
+  font-size: rem(14);
+  text-shadow: 0 rem(4) rem(4) rgba(#000000, 0.25);
+  line-height: calc(18 / 14);
+  color: $accent-color-green;
+  margin-top: rem(8);
+}
+
+.contact__btn {
+  margin-top: rem(40);
+  display: inline-block;
+}

@@ -1,0 +1,22 @@
+@use "global" as *;
+
+.arrow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: rem(8);
+  line-height: calc(22 / 14);
+  padding-right: rem(1);
+}
+
+.arrow::after {
+  content: "";
+  border-right: rem(1) solid $white;
+  border-bottom: rem(1) solid $white;
+  transform: skew(45deg);
+  display: inline-block;
+  height: rem(6);
+  width: rem(40);
+  position: relative;
+  top: -0.2em;
+}

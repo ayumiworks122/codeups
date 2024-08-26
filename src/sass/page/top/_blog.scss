@@ -1,0 +1,110 @@
+@use "global" as *;
+
+.blog.section {
+  @include mq("md") {
+    background-image: url(../images/top/blog-bg-01.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100% 60%;
+    padding-top: rem(100);
+    padding-bottom: 0;
+    position: relative;
+  }
+}
+
+.blog::before {
+  @include mq("md") {
+    content: "";
+    position: absolute;
+    background-image: url(../images/top/blog-bg-02.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    width: rem(437);
+    height: auto;
+    aspect-ratio: 437 / 201;
+    top: rem(24);
+    left: calc(50% - min(48.5vw, rem(621)));
+  }
+}
+
+.blog__inner.inner {
+  padding-left: rem(21);
+  padding-right: rem(21);
+}
+
+.blog__section-header .section-header__en {
+  @include mq("md") {
+    color: $white;
+  }
+}
+
+.blog__section-header .section-header__en::first-letter {
+  @include mq("md") {
+    color: $accent-color-green-light;
+  }
+}
+
+.blog__section-header .section-header__jp {
+  @include mq("md") {
+    color: $white;
+  }
+}
+
+.blog__items {
+  margin-top: rem(24);
+  display: flex;
+  flex-direction: column;
+  gap: rem(40);
+  @include mq("md") {
+    margin-top: rem(80);
+    flex-direction: row;
+    max-width: rem(1080);
+  }
+}
+
+.blog__item a {
+  box-shadow: rem(2) rem(2) rem(10) 0 rgba(#000000, 0.25);
+  padding: rem(16) rem(16) rem(24);
+  background-color: $white;
+  @include mq("md") {
+    padding-bottom: rem(24);
+  }
+}
+
+.blog__thumbnail img {
+  aspect-ratio: 300 / 200;
+  height: auto;
+}
+
+.blog__date {
+  margin-top: rem(24);
+  display: block;
+  font-family: $en-font-family;
+  font-size: rem(12);
+  line-height: calc(18 / 12);
+}
+
+.blog__btn {
+  @include mq("md") {
+    margin-top: rem(80);
+  }
+}
+
+.blog__title.section-subheader {
+  font-size: rem(16);
+  line-height: calc(24 / 16);
+  font-weight: 500;
+}
+
+.blog__explanation {
+  margin-top: 1em;
+  font-size: rem(16);
+  line-height: calc(24 / 16);
+}
+
+.blog__btn {
+  text-align: center;
+  margin-top: rem(40);
+}
