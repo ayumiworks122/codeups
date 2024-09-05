@@ -6,7 +6,7 @@
   opacity: 0;
   z-index: 100;
   background-color: $accent-color-green;
-  transition: opacity 0.3s ease 0s;
+  transition: all 0.5s ease 0s;
   width: 100%;
   top: 0;
   left: 0;
@@ -16,7 +16,7 @@
     opacity: 1;
     position: relative;
     background-color: initial;
-    height: initial;
+    height: 100%;
   }
 }
 
@@ -34,7 +34,7 @@
   @include mq("md") {
     margin-top: initial;
     flex-direction: row;
-    height: initial;
+    height: 100%;
     max-width: initial;
     justify-content: flex-end;
     padding: 0;
@@ -55,12 +55,12 @@
   justify-content: center;
   color: $white;
   gap: rem(24);
-
   @include mq("md") {
     align-items: center;
     gap: rem(4);
     position: relative;
     padding: rem(21) rem(20);
+    height: 100%;
   }
 }
 
@@ -68,9 +68,10 @@
   @include mq("md") {
     content: "";
     position: absolute;
-    bottom: rem(12);
+    bottom: rem(21);
     left: 0;
-    width: 100%;
+    left: rem(21);
+    width: calc(100% - rem(42));
     height: rem(1);
     background: #fff;
     transition: all 0.3s;
@@ -79,8 +80,13 @@
   }
 }
 
-.nav__item a:hover::after {
-  transform: scale(1, 1);
+@media (hover: hover) {
+  .nav__item a:hover {
+    opacity: 1;
+  }
+  .nav__item a:hover::after {
+    transform: scale(1, 1);
+  }
 }
 
 .nav__item-en {

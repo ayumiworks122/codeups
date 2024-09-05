@@ -44,6 +44,7 @@
 @media (hover: hover) {
   .btn:hover {
     color: $accent-color-green;
+    opacity: 1;
   }
   .btn:hover::after {
     transform: scale(1, 1);

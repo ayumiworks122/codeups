@@ -42,6 +42,7 @@
 }
 
 .sns__item--facebook img {
+  object-fit: contain;
   @include mq("md") {
     max-width: rem(26);
   }
@@ -79,7 +80,7 @@
   max-height: rem(452);
   flex-wrap: wrap;
   @include mq("md") {
-    max-height: rem(202);
+    max-height: rem(203);
     margin-top: rem(24);
     gap: rem(40) 2.2%;
   }

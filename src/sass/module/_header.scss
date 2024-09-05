@@ -7,6 +7,7 @@
   left: 0;
   z-index: 100;
   width: 100vw;
+  height: rem(80);
   @include mq("md") {
     height: rem(90);
   }
@@ -37,12 +38,11 @@
   }
 }
 
-.header__inner.inner {
+.header__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: rem(21);
-  padding-bottom: rem(21);
+  height: inherit;
   @include mq("md") {
     max-width: 100%;
     padding: 0 rem(20) 0 rem(40);
@@ -57,5 +57,12 @@
 }
 
 .header__logoLink {
-  width: rem(133);
+  width: rem(102);
+  @include mq("md") {
+    width: rem(133);
+  }
+}
+
+.header__logoLink img {
+  object-fit: contain;
 }

@@ -26,6 +26,9 @@
 .campaign__item {
   width: rem(280);
   box-shadow: rem(2) rem(2) rem(10) rgba(#000000, 0.25);
+  height: auto;
+  display: flex;
+  flex-direction: column;
   @include mq("md") {
     width: rem(333);
   }
@@ -34,6 +37,9 @@
 .campaign__content {
   padding: rem(16) rem(16) rem(24) rem(16);
   background-color: $white;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
   @include mq("md") {
     padding: rem(24) rem(16) rem(40);
   }
@@ -44,6 +50,7 @@
   line-height: calc(24 / 16);
   margin-top: rem(4);
   padding-bottom: rem(8);
+  flex-grow: 1;
 }
 
 .campaign__label.label {
@@ -101,6 +108,7 @@
 
 .campaign__slider {
   position: relative;
+  overflow: visible !important;
 }
 
 .campaign__slider .swiper-button-next,
