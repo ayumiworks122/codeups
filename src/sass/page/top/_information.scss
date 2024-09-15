@@ -1,9 +1,10 @@
 @use "global" as *;
 
-.information.section {
+.information {
   background-color: $accent-color-green-light;
+  padding: rem(80) 0;
   @include mq("md") {
-    padding-top: rem(100);
+    padding: rem(100) 0;
   }
 }
 

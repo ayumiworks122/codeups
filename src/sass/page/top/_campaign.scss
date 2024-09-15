@@ -1,11 +1,14 @@
 @use "global" as *;
 
 .campaign.section {
-  overflow: hidden;
-  padding-top: rem(40);
+  margin-top: rem(40);
   @include mq("md") {
-    padding-top: rem(120);
+    margin-top: rem(120);
   }
+}
+
+.campaign__inner {
+  position: relative;
 }
 
 .campaign__btn {
@@ -32,6 +35,11 @@
   @include mq("md") {
     width: rem(333);
   }
+}
+
+.campaign__thumbnail img {
+  aspect-ratio: 333 /223;
+  height: auto;
 }
 
 .campaign__content {
@@ -108,28 +116,32 @@
 
 .campaign__slider {
   position: relative;
-  overflow: visible !important;
+  margin-right: calc(50% - 50vw);
+  padding-left: rem(30);
+  margin-left: rem(-30);
+  padding-bottom: rem(25);
+  margin-bottom: rem(-25);
 }
 
-.campaign__slider .swiper-button-next,
-.campaign__slider .swiper-button-prev {
+.campaign .swiper-button-next,
+.campaign .swiper-button-prev {
   display: none;
   @include mq("md") {
-    top: 0;
-    transform: translateY(-105%);
+    top: rem(23);
     border: rem(1) solid $accent-color-green;
     width: rem(80);
     height: rem(80);
     border-radius: 50%;
     display: block;
+    transform: translateX(-32%);
   }
 }
 
-.campaign__slider .swiper-button-next {
+.campaign .swiper-button-next {
   right: 0;
 }
 
-.campaign__slider .swiper-button-next:after {
+.campaign .swiper-button-next:after {
   content: "";
   border-right: rem(1) solid $accent-color-green;
   border-bottom: rem(1) solid $accent-color-green;
@@ -142,13 +154,13 @@
   top: 30%;
 }
 
-.campaign__slider .swiper-button-prev {
+.campaign .swiper-button-prev {
   right: rem(160);
   left: inherit;
   opacity: 1;
 }
 
-.campaign__slider .swiper-button-prev:after {
+.campaign .swiper-button-prev:after {
   content: "";
   border-left: rem(1) solid $accent-color-green;
   border-bottom: rem(1) solid $accent-color-green;

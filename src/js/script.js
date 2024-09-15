@@ -47,6 +47,12 @@ const mvSwiper = new Swiper("#swiper01", {
 });
 // キャンペーンスライダー
 const campaignSwiper = new Swiper("#swiper02", {
+  loop: true,
+  grabCursor: true,
+  autoplay: {
+    delay: 3000,
+  },
+  speed: 2500,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",

@@ -7,10 +7,11 @@
   display: block;
   z-index: 10;
   transform: translateY(-90%);
+  margin-top: rem(80);
   @include mq("md") {
     width: rem(80);
     right: rem(20);
-    margin-top: rem(-10);
+    margin-top: rem(135);
   }
 }
 

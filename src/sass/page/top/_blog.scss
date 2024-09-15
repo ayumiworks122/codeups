@@ -1,8 +1,10 @@
 @use "global" as *;
 
-.blog.section {
+.blog {
   position: relative;
+  margin-top: rem(80);
   @include mq("md") {
+    margin-top: 0;
     padding-top: rem(100);
   }
 }
@@ -15,7 +17,7 @@
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 52%;
+    height: 60%;
     width: 100%;
     top: 0;
     z-index: -1;
@@ -36,6 +38,15 @@
     aspect-ratio: 437 / 201;
     top: rem(24);
     left: calc(50% - min(48.5vw, rem(621)));
+  }
+}
+
+.blog__inner.inner {
+  padding-left: rem(21);
+  padding-right: rem(21);
+  @include mq("md") {
+    padding-left: rem(25);
+    padding-right: rem(25);
   }
 }
 

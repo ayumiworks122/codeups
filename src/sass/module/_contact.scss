@@ -10,7 +10,7 @@
     box-shadow: rem(4) rem(4) rem(10) rgba(#000000, 0.25);
     padding: rem(80) rem(31) rem(80) rem(50);
     justify-content: space-between;
-    gap: 7.6%;
+    // gap: 7.6%;
   }
 }
 
@@ -94,25 +94,27 @@
 .contact__logo img {
   width: rem(174);
   margin: 0 auto;
+  object-fit: contain;
   @include mq("md") {
     width: rem(200);
     height: rem(75);
   }
 }
 
-.contact__access-image {
+.contact__access-map {
   @include mq("md") {
     width: 62%;
   }
 }
 
-.contact__access-image img {
+.contact__access-map iframe {
   aspect-ratio: 295 / 160;
   box-shadow: 0 rem(4) rem(4) rgba(#000000, 0.25);
+  display: block;
+  width: 100%;
+  height: auto;
   @include mq("md") {
     aspect-ratio: 273 / 148;
-    width: rem(273);
-    height: 100%;
   }
 }
 
@@ -121,6 +123,7 @@
   @include mq("md") {
     border-left: rem(1) solid $accent-color-green;
     padding: rem(20) rem(81);
+    margin-left: rem(43);
   }
 }
 

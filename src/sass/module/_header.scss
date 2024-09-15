@@ -17,7 +17,7 @@
   position: absolute;
   display: block;
   width: 100%;
-  height: rem(104);
+  height: rem(80);
   background-color: $accent-color-green;
   content: "";
   z-index: 100;
@@ -43,9 +43,10 @@
   justify-content: space-between;
   align-items: center;
   height: inherit;
+  padding: 0 rem(20);
   @include mq("md") {
     max-width: 100%;
-    padding: 0 rem(20) 0 rem(40);
+    padding: 0 rem(40);
     height: 100%;
   }
 }
