@@ -44,6 +44,10 @@
 /*********************************
 	BASE SET
 *********************************/
+body.active {
+  overflow: hidden;
+}
+
 a {
   display: block;
   transition: opacity 0.3s ease 0s;

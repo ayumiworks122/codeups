@@ -3,8 +3,10 @@
 .information {
   background-color: $accent-color-green-light;
   padding: rem(80) 0;
+  margin-top: rem(80);
   @include mq("md") {
     padding: rem(100) 0;
+    margin-top: rem(164);
   }
 }
 

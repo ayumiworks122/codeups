@@ -4,6 +4,7 @@ jQuery(function ($) {
     $(".humburger").on("click", function () {
       $(this).toggleClass("active");
       $(".header__menu").toggleClass("active");
+      $("body").toggleClass("active");
       return false;
     });
   });
@@ -64,4 +65,34 @@ const campaignSwiper = new Swiper("#swiper02", {
       spaceBetween: 40,
     },
   },
+});
+
+//トップへ戻るボタンの追従処理
+window.addEventListener("scroll", function () {
+
+  var pagetop = document.querySelector(".pagetop");
+  var pagetopHeight = document.querySelector(".pagetop").offsetHeight;
+  var scroll = window.scrollY + window.innerHeight;
+  var footer =
+    document.querySelector(".footer").offsetTop + pagetopHeight; 
+  var absoluteBottom =
+    document.querySelector(".footer").offsetHeight - pagetopHeight;
+
+  if (scroll > window.innerHeight) {
+    // ページトップから1画面の高さ分、下にスクロールしたら
+    pagetop.style.opacity = "1"; // 「ページトップへ戻る」ボタンをフェードイン
+      if (scroll > footer) {
+        // 画面下部からfooterが現れたら
+        // pagetop.style.position = "absolute";
+        // pagetop.style.bottom = absoluteBottom + "px";
+        pagetop.style.opacity = "0";
+      } else {
+        pagetop.style.position = "fixed";
+        pagetop.style.bottom = "0px";
+        pagetop.style.opacity = "1";
+      }
+  } else {
+    pagetop.style.opacity = "0"; // ページトップから1画面の高さ以内でスクロールしている場合はフェードアウト
+  }
+
 });

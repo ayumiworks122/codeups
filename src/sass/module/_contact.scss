@@ -10,7 +10,6 @@
     box-shadow: rem(4) rem(4) rem(10) rgba(#000000, 0.25);
     padding: rem(80) rem(31) rem(80) rem(50);
     justify-content: space-between;
-    // gap: 7.6%;
   }
 }
 
@@ -122,8 +121,8 @@
   text-align: center;
   @include mq("md") {
     border-left: rem(1) solid $accent-color-green;
-    padding: rem(20) rem(81);
-    margin-left: rem(43);
+    padding: rem(20) clamp(1.875rem, -1.768rem + 7.589vw, 5.063rem);
+    margin-left: clamp(1.25rem, -0.393rem + 3.423vw, 2.688rem);
   }
 }
 
