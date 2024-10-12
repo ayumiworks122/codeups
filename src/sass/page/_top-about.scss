@@ -1,14 +1,14 @@
 @use "global" as *;
 
-.about {
+.top-about {
   position: relative;
 }
 
-.about__inner {
+.top-about__inner {
   position: relative;
 }
 
-.about__inner:after {
+.top-about__inner:after {
   @include mq("md") {
     content: "";
     position: absolute;
@@ -25,19 +25,19 @@
   }
 }
 
-.about__image {
+.top-about__image {
   margin-top: rem(24);
   @include mq("md") {
     margin-top: rem(40);
   }
 }
 
-.about__image img {
+.top-about__image img {
   aspect-ratio: 345 / 212;
   height: 100%;
 }
 
-.about__content {
+.top-about__content {
   margin-top: rem(40);
   display: flex;
   flex-direction: column;
@@ -55,7 +55,7 @@
   }
 }
 
-.about__title {
+.top-about__title {
   font-size: rem(40);
   line-height: 1;
   color: $accent-color-green;
@@ -69,13 +69,13 @@
   }
 }
 
-.about__info {
+.top-about__info {
   @include mq("md") {
     flex: 1;
   }
 }
 
-.about__text {
+.top-about__text {
   font-size: rem(16);
   line-height: calc(24 / 16);
   @include mq("md") {
@@ -83,7 +83,7 @@
   }
 }
 
-.about__btn {
+.top-about__btn {
   margin-top: rem(50);
   text-align: center;
   @include mq("md") {

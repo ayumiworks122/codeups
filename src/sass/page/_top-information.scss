@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.information {
+.top-information {
   background-color: $accent-color-green-light;
   padding: rem(80) 0;
   margin-top: rem(80);
@@ -10,7 +10,7 @@
   }
 }
 
-.information__contents {
+.top-information__contents {
   display: flex;
   flex-direction: column;
   gap: rem(24);
@@ -24,7 +24,7 @@
   }
 }
 
-.information__subtitle {
+.top-information__subtitle {
   font-size: rem(20);
   line-height: calc(24 / 20);
   padding-bottom: rem(4) !important;
@@ -35,13 +35,13 @@
   }
 }
 
-.information__image {
+.top-information__image {
   @include mq("md") {
     width: calc(540 / 1080 * 100%);
   }
 }
 
-.information__image img {
+.top-information__image img {
   aspect-ratio: 345 / 227;
   width: vw(375, 345);
   height: auto;
@@ -51,19 +51,19 @@
   }
 }
 
-.information__info {
+.top-information__info {
   @include mq("md") {
     width: calc(492 / 1080 * 100%);
   }
 }
 
-.information__explanation {
+.top-information__explanation {
   margin-top: 0.5em;
   font-size: rem(16);
   line-height: calc(24 / 16);
 }
 
-.information__btn {
+.top-information__btn {
   text-align: center;
   margin-top: rem(40);
 }
