@@ -37,8 +37,9 @@ jQuery(function ($) {
     });
   });
 });
+
 // メインビジュアルスライダー
-const mvSwiper = new Swiper("#swiper01", {
+const mvSwiper = new Swiper(".js-mv-swiper", {
   loop: true,
   autoplay: {
     delay: 3000,
@@ -46,8 +47,9 @@ const mvSwiper = new Swiper("#swiper01", {
   effect: "fade",
   speed: 2500,
 });
+
 // キャンペーンスライダー
-const campaignSwiper = new Swiper("#swiper02", {
+const campaignSwiper = new Swiper(".js-campaign-swiper", {
   loop: true,
   grabCursor: true,
   autoplay: {

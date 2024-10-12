@@ -13,6 +13,31 @@
   }
 }
 
+.header__menu {
+  visibility: hidden;
+  position: fixed;
+  opacity: 0;
+  z-index: 100;
+  background-color: $accent-color-green;
+  transition: all 0.5s ease 0s;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  @include mq("md") {
+    visibility: visible;
+    opacity: 1;
+    position: relative;
+    background-color: initial;
+    height: 100%;
+  }
+}
+
+.header__menu.active {
+  opacity: 1;
+  visibility: visible;
+}
+
 .header__menu::before {
   position: absolute;
   display: block;
@@ -66,4 +91,125 @@
 
 .header__logoLink img {
   object-fit: contain;
+}
+
+.header__menu-items.inner {
+  display: flex;
+  flex-direction: column;
+  gap: rem(40) 4%;
+  height: rem(452);
+  flex-wrap: wrap;
+  @include mq("md") {
+    margin-top: initial;
+    flex-direction: row;
+    height: 100%;
+    max-width: initial;
+    justify-content: flex-end;
+    padding: 0;
+    gap: rem(40);
+  }
+}
+
+.header__menu-item {
+  width: 49%;
+  @include mq("md") {
+    width: initial;
+  }
+}
+
+.header__menu-item a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: $white;
+  gap: rem(24);
+  @include mq("md") {
+    align-items: center;
+    gap: rem(4);
+    position: relative;
+    // padding: rem(21) rem(20);
+    // padding: 0 rem(20);
+    height: 100%;
+  }
+}
+
+.header__menu-item a::after {
+  @include mq("md") {
+    content: "";
+    position: absolute;
+    bottom: rem(21);
+    left: 0;
+    left: rem(21);
+    width: calc(100% - rem(42));
+    height: rem(1);
+    background: #fff;
+    transition: all 0.3s;
+    transform: scale(0, 1);
+    transform-origin: center top;
+  }
+}
+
+@media (hover: hover) {
+  .header__menu-item a:hover {
+    opacity: 1;
+  }
+  .header__menu-item a:hover::after {
+    transform: scale(1, 1);
+  }
+}
+
+.header__menu-item-en {
+  font-family: $en-font-family;
+  display: none;
+  @include mq("md") {
+    display: block;
+    font-size: rem(18);
+    line-height: 1;
+  }
+}
+
+.header__menu-item-jp {
+  font-size: rem(16);
+  font-weight: bold;
+  line-height: calc(18 / 16);
+  position: relative;
+  display: flex;
+  gap: rem(4);
+  word-break: keep-all;
+  @include mq("md") {
+    font-size: rem(10);
+    line-height: calc(15 / 10);
+    font-weight: initial;
+  }
+}
+
+.header__menu-item-jp:before {
+  background-image: url(../images/common/icon-hitode.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  height: rem(18);
+  aspect-ratio: 1 /1;
+  display: block;
+  @include mq("md") {
+    display: none;
+  }
+}
+
+.header__subitems {
+  display: flex;
+  flex-direction: column;
+  gap: rem(24);
+  margin-top: rem(24);
+  margin-left: rem(22);
+  @include mq("md") {
+    display: none;
+  }
+}
+
+.header__subitem {
+  font-size: rem(16);
+  font-weight: normal;
+  line-height: calc(18 / 16);
 }

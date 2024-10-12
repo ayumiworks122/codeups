@@ -1,0 +1,46 @@
+@use "global" as *;
+
+.blog-card {
+  background-color: #fff;
+}
+
+.blog-card a {
+  box-shadow: rem(2) rem(2) rem(10) 0 rgba(#000000, 0.25);
+  padding: rem(16) rem(16) rem(24);
+  background-color: $white;
+  height: 100%;
+  @include mq("md") {
+    padding-bottom: rem(24);
+  }
+}
+
+.blog-card__thumbnail img {
+  aspect-ratio: 300 / 200;
+  height: auto;
+}
+
+.blog-card__date {
+  margin-top: rem(24);
+  display: block;
+  font-family: $en-font-family;
+  font-size: rem(12);
+  line-height: calc(18 / 12);
+}
+
+.blog-card__btn {
+  @include mq("md") {
+    margin-top: rem(80);
+  }
+}
+
+.blog-card__title.section-subheader {
+  font-size: rem(16);
+  line-height: calc(24 / 16);
+  font-weight: 500;
+}
+
+.blog-card__explanation {
+  margin-top: 1em;
+  font-size: rem(16);
+  line-height: calc(24 / 16);
+}

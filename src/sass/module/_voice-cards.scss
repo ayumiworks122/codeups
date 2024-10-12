@@ -1,0 +1,12 @@
+@use "global" as *;
+
+.voice-cards {
+  margin-top: rem(40);
+  display: grid;
+  gap: rem(40);
+  @include mq("md") {
+    margin-top: rem(30);
+    grid-template-columns: repeat(auto-fill, 48.14%);
+    gap: rem(40) 3.7%;
+  }
+}

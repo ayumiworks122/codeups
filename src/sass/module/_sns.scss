@@ -1,12 +1,12 @@
 @use "global" as *;
 
-.sns__items {
+.sns {
   display: flex;
   align-items: center;
   gap: rem(16);
 }
 
-.sns__items a {
+.sns a {
   display: grid;
   width: rem(24);
   height: rem(24);

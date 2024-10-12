@@ -1,0 +1,15 @@
+@use "global" as *;
+
+.blog-cards {
+  margin-top: rem(24);
+  // display: flex;
+  // flex-direction: column;
+  display: grid;
+  gap: rem(40);
+  @include mq("md") {
+    margin-top: rem(80);
+    max-width: rem(1080);
+    grid-template-columns: repeat(auto-fill, 30.8%);
+    gap: 3.7%;
+  }
+}

@@ -1,0 +1,75 @@
+@use "global" as *;
+
+.voice-card__contents {
+  box-shadow: rem(2) rem(2) rem(10) 0 rgba(#000000, 0.25);
+  padding: rem(15) rem(16) rem(24);
+  @include mq("md") {
+    padding: rem(24);
+  }
+}
+
+.voice-card__info {
+  display: flex;
+  gap: 4%;
+  align-items: flex-end;
+  @include mq("md") {
+    gap: 3.5%;
+  }
+}
+
+.voice-card__text {
+  flex: 1;
+}
+
+.voice-card__age {
+  font-size: rem(12);
+  line-height: calc(18 / 12);
+}
+
+.voice-card__title {
+  font-size: rem(16);
+  font-weight: 500;
+  margin-top: rem(4);
+  line-height: 1.45;
+  @include mq("md") {
+    font-size: rem(24);
+    margin-top: rem(8);
+  }
+}
+
+.voice-card__image {
+  width: 48.24%;
+  max-width: rem(150);
+  @include mq("md") {
+    min-width: rem(180);
+  }
+}
+
+.voice-card__image img {
+  height: auto;
+  @include mq("md") {
+    width: rem(180);
+    aspect-ratio: 180 / 140;
+    height: 100%;
+  }
+}
+
+.voice-card__content {
+  margin-top: rem(15);
+  font-size: rem(16);
+  line-height: calc(24 / 16);
+  @include mq("md") {
+    margin-top: rem(40);
+  }
+}
+
+.voice-card__basic {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  @include mq("md") {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
