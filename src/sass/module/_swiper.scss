@@ -1,0 +1,51 @@
+@use "global" as *;
+
+.swiper-button-next,
+.swiper-button-prev {
+  display: none;
+  @include mq("md") {
+    top: rem(23);
+    border: rem(1) solid $accent-color-green;
+    width: rem(80);
+    height: rem(80);
+    border-radius: 50%;
+    display: block;
+    transform: translateX(-32%);
+  }
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+.swiper-button-next:after {
+  content: "";
+  border-right: rem(1) solid $accent-color-green;
+  border-bottom: rem(1) solid $accent-color-green;
+  transform: skew(45deg);
+  display: inline-block;
+  height: rem(6);
+  width: rem(40);
+  position: relative;
+  left: 20%;
+  top: 30%;
+}
+
+.swiper-button-prev {
+  right: rem(160);
+  left: inherit;
+  opacity: 1;
+}
+
+.swiper-button-prev:after {
+  content: "";
+  border-left: rem(1) solid $accent-color-green;
+  border-bottom: rem(1) solid $accent-color-green;
+  transform: skew(-45deg);
+  display: inline-block;
+  height: rem(6);
+  width: rem(40);
+  position: relative;
+  left: 27%;
+  top: 30%;
+}

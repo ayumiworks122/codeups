@@ -3,10 +3,8 @@
 .price {
   background-color: $accent-color-green-light;
   position: relative;
-  margin-top: rem(80);
   padding: rem(80) 0;
   @include mq("md") {
-    margin-top: rem(140);
     padding: rem(100) 0;
   }
 }

@@ -1,0 +1,69 @@
+@use "global" as *;
+
+.information {
+  background-color: $accent-color-green-light;
+  padding: rem(80) 0;
+  margin-top: rem(80);
+  @include mq("md") {
+    padding: rem(100) 0;
+    margin-top: rem(164);
+  }
+}
+
+.information__contents {
+  display: flex;
+  flex-direction: column;
+  gap: rem(24);
+  margin-top: rem(24);
+  @include mq("md") {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: rem(40);
+    gap: rem(48);
+  }
+}
+
+.information__subtitle {
+  font-size: rem(20);
+  line-height: calc(24 / 20);
+  padding-bottom: rem(4) !important;
+  @include mq("md") {
+    font-size: rem(24);
+    line-height: calc(24 / 24);
+    padding-bottom: rem(8) !important;
+  }
+}
+
+.information__image {
+  @include mq("md") {
+    width: calc(540 / 1080 * 100%);
+  }
+}
+
+.information__image img {
+  aspect-ratio: 345 / 227;
+  width: vw(375, 345);
+  height: auto;
+  @include mq("md") {
+    aspect-ratio: 540 / 356;
+    width: 100%;
+  }
+}
+
+.information__info {
+  @include mq("md") {
+    width: calc(492 / 1080 * 100%);
+  }
+}
+
+.information__explanation {
+  margin-top: 0.5em;
+  font-size: rem(16);
+  line-height: calc(24 / 16);
+}
+
+.information__btn {
+  text-align: center;
+  margin-top: rem(40);
+}

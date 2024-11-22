@@ -1,0 +1,7 @@
+@use "global" as *;
+
+.section-subheader {
+  border-bottom: rem(1) solid $accent-color-green;
+  font-weight: bold;
+  padding-bottom: rem(4);
+}

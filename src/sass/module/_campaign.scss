@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.campaign.section {
+.campaign {
   margin-top: rem(40);
   overflow: hidden;
   @include mq("md") {
@@ -29,89 +29,8 @@
 
 .campaign__item {
   width: rem(280);
-  box-shadow: rem(2) rem(2) rem(10) rgba(#000000, 0.25);
-  height: auto;
-  display: flex;
-  flex-direction: column;
   @include mq("md") {
     width: rem(333);
-  }
-}
-
-.campaign__thumbnail img {
-  aspect-ratio: 333 /223;
-  height: auto;
-}
-
-.campaign__content {
-  padding: rem(16) rem(16) rem(24) rem(16);
-  background-color: $white;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  @include mq("md") {
-    padding: rem(24) rem(16) rem(40);
-  }
-}
-
-.campaign__section-subheader.section-subheader {
-  font-size: rem(16);
-  line-height: calc(24 / 16);
-  margin-top: rem(4);
-  padding-bottom: rem(8);
-  flex-grow: 1;
-}
-
-.campaign__label.label {
-  padding: rem(6) rem(16);
-}
-.campaign__text {
-  font-size: rem(14);
-  margin-top: rem(8);
-  text-align: center;
-  line-height: calc(24 / 14);
-  @include mq("md") {
-    margin-top: rem(15);
-    font-size: rem(16);
-    line-height: calc(24 / 16);
-  }
-}
-
-.campaign__price {
-  margin-top: rem(8);
-  display: flex;
-  justify-content: center;
-  gap: rem(16);
-  align-items: flex-end;
-  @include mq("md") {
-    gap: rem(24);
-  }
-}
-
-.campaign__price-before {
-  font-weight: bold;
-  font-family: $Lato-font-family;
-  font-size: rem(20);
-  position: relative;
-  top: rem(-3);
-  line-height: 1;
-  @include mq("md") {
-    font-size: rem(24);
-  }
-}
-
-.campaign__price-before del {
-  text-decoration: line-through rem(3) solid #c94800;
-}
-
-.campaign__price-after {
-  font-size: rem(32);
-  line-height: 1;
-  font-family: $Lato-font-family;
-  color: $accent-color-green;
-  font-weight: bold;
-  @include mq("md") {
-    font-size: rem(40);
   }
 }
 
@@ -122,54 +41,4 @@
   margin-left: rem(-30);
   padding-bottom: rem(25);
   margin-bottom: rem(-25);
-}
-
-.campaign .swiper-button-next,
-.campaign .swiper-button-prev {
-  display: none;
-  @include mq("md") {
-    top: rem(23);
-    border: rem(1) solid $accent-color-green;
-    width: rem(80);
-    height: rem(80);
-    border-radius: 50%;
-    display: block;
-    transform: translateX(-32%);
-  }
-}
-
-.campaign .swiper-button-next {
-  right: 0;
-}
-
-.campaign .swiper-button-next:after {
-  content: "";
-  border-right: rem(1) solid $accent-color-green;
-  border-bottom: rem(1) solid $accent-color-green;
-  transform: skew(45deg);
-  display: inline-block;
-  height: rem(6);
-  width: rem(40);
-  position: relative;
-  left: 20%;
-  top: 30%;
-}
-
-.campaign .swiper-button-prev {
-  right: rem(160);
-  left: inherit;
-  opacity: 1;
-}
-
-.campaign .swiper-button-prev:after {
-  content: "";
-  border-left: rem(1) solid $accent-color-green;
-  border-bottom: rem(1) solid $accent-color-green;
-  transform: skew(-45deg);
-  display: inline-block;
-  height: rem(6);
-  width: rem(40);
-  position: relative;
-  left: 27%;
-  top: 30%;
 }

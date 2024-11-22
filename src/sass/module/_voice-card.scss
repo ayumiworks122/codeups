@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.voice-card__contents {
+.voice-card {
   box-shadow: rem(2) rem(2) rem(10) 0 rgba(#000000, 0.25);
   padding: rem(15) rem(16) rem(24);
   @include mq("md") {

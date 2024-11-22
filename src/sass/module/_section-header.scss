@@ -1,12 +1,5 @@
 @use "global" as *;
 
-.section {
-  margin-top: rem(80);
-  @include mq("md") {
-    margin-top: rem(140);
-  }
-}
-
 .section-header {
   text-align: center;
   display: flex;
@@ -38,10 +31,4 @@
 
 .section-header__en::first-letter {
   color: $accent-color-green;
-}
-
-.section-subheader {
-  border-bottom: rem(1) solid $accent-color-green;
-  font-weight: bold;
-  padding-bottom: rem(4);
 }
